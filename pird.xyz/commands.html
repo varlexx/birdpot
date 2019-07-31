@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="tr" class="dark">
+  
+<!-- Mirrored from pird.xyz/commands by zikscopy Website Copier/3.x [XR&CO'2014], Wed, 31 Jul 2019 21:17:54 GMT -->
+<!-- Added by zikscopy --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by zikscopy -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>PirdBot - The Discord Bot</title>
+
+    <meta name="keywords" content="Discord, Discord Bot, Discord App, DiscordApp, DiscordBots, Discord Bots, PirdWeb, PirdBot, PirdBot Support, PirdBot Blocker, Bots"/>
+    <meta name="description" content="PirdBot Discord Bot ile sunucularınızı renk katıp kolayca kontrol sağlayabilirsiniz. Bu site sayesinde sunucunuzdaki PirdBot ayarlarını yapabilirsiniz."/>
+
+    <meta name="robots" content="index, follow"/>
+    <meta name="copyright" content="&copy; Pird System"/>
+    <meta name="author" content="Berk A."/>
+    <meta name="abstract" content="PirdBot Yönetim ve Kontrol Paneli"/>
+
+    <link rel="stylesheet" href="content/assets/css/bootstrap.min3661.css?v=2.0" rel="stylesheet">
+    <link rel="stylesheet" href="content/assets/css/style3661.css?v=2.0" rel="stylesheet">
+    <link href="../stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min3661.css?v=2.0" rel="stylesheet">
+
+    <script src="content/assets/js/jquery-1.8.3.min3661.js?v=2.0"></script>
+    <script src="content/assets/js/bootstrap.min3661.js?v=2.0"></script>
+    <script src="content/assets/js/custom3661.js?v=2.0"></script>
+
+    <link rel="shortcut icon" href="content/assets/img/favicon3661.png?v=2.0">
+  </head>
+  <body>
+    <div class="header">
+      <div class="header__logo">
+        PirdBot
+      </div>
+      <div class="header__nav">
+        <a href="index.html">Anasayfa</a>
+        <a href="commands.html">Komutlar</a>
+        <a href="modules.html">Modüller</a>
+        <a href="blog.html">Blog</a>
+        <a href="http://discord.gg/Xch8yQ9" target="_blank">Destek</a>
+      </div>
+      <div class="header__controle">
+                  <a href="javascript:void(0)" onclick="PirdWindow(LOGIN_URL)" class="btn pird">Giriş Yap</a>
+              </div>
+    </div>
+    <div class="container-fluid">
+      
+<div class="col-md-3">
+  <div class="panel panel-default panel-c" id="commands_category">
+    <div class="panel-heading">Komutlar</div>
+    <div class="panel-body">
+
+      <ul class="nav nav-pills nav-stacked">
+                          <li class='active'><a href="#moderasyon" data-toggle="tab">Moderasyon</a></li>
+                            <li ><a href="#kullanici" data-toggle="tab">Kullanıcı</a></li>
+                            <li ><a href="#ekstra" data-toggle="tab">Ekstra</a></li>
+                            <li ><a href="#eglence" data-toggle="tab">Eğlence</a></li>
+                        </ul>
+
+    </div>
+  </div>
+</div>
+<div class="col-md-6">
+  <div class="form-group">
+    <input type="text" class="form-control" id="searchCommands" placeholder="Aramak istediğiniz komutu yazınız.">
+  </div>
+  <div class="panel panel-default panel-k" id="searchEmpty" style="display: none;">
+    <div class="panel-heading test-center" style="border: 0px;border-radius: 5px;">
+      Yazdığınız <code id="searchValue"></code> kelimeye uygun herhangi bir sonuç bulunamadı.
+    </div>
+  </div>
+  <div class="tab-content">
+              <div class="tab-pane active in" id="moderasyon">
+                          <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!addRole @Kullanıcı @Role</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Belirlenen rolü belirlenen kullanıcıya verir.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!removeRole @Kullanıcı @Role</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Bot Belirlenen rolü belirtilen kullanıcı'dan alır.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!ban @Kullanıcı Sebep</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Belirlenen kullanıcıyı belirlenen sebep ile banlar.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!duyuru MESAJ</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Yazdığınız mesajı kullandığınız kanala bot mesaj olarak atar.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!kick @Kullanıcı</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Belirtilen kullanıcıyı sunucudan atar.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!mute @Kullanıcı Sebep</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Belirtilen kullanıcıyı belirtilen sebep ile muteler.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!unmute @Kullanıcı</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Belirtilen kullanıcının mutesini kaldırır.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!botnick İsim</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Bot'a sunucu'da istediğiniz ismi verirsiniz.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!oyla Yazı</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Komutu hangi odada kullandıysanız bot o kanala yazdığınız mesajı oylama olarak gönderir.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!sil</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+               Belirttiğiniz sayıda mesajı siler.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!otorol </code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Belirlediğiniz rolü sunucuya giren herkese otomatik olarak verir.            </div>
+          </div>
+              </div>
+                <div class="tab-pane " id="kullanici">
+                          <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!avatar @Kullanıcı</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Belirlenen kullanıcı'nın avatarı'nı gösterir.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!help</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Bot'ta bulunan yardım menüsünü size gönderir.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!info</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Bot'un istatistiklerini gösterir.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!kb</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Bot Komutu kullanan kişinin kullanıcı bilgilerini gösterir.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!kurucu</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Komutun kullanıldığı sunucunun sahibini gösterir.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!sunucu</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Komutu kullanıldığı sunucunun bilgilerini gösterir.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!tavsiye</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Bot Botun yapımcılarına yazdığınız mesajı öneri olarak iletir.             </div>
+          </div>
+              </div>
+                <div class="tab-pane " id="ekstra">
+                          <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!bağış</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Bu komut ile barkodumu'za ulaşıp bot için bağış yapabilirsiniz.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!cevir</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Bu komut ile yazdığınız yazıyı istediğiniz dile çevirebilirsiniz.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!davet</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Bu komut kullanan kişiye bot diğer botların ve kendi davet linkini gönderir.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!doviz</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Belirlenen para biriminin Dünyada'ki alış ve satışlarını gösterir             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!skor</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Komutun kullanıldığı sunucudaki ilk 10 davet liderlerini gösterir.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!namazvakti</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Bot bu komut ile seçtiğiniz şehir'in namaz vakitlerini gösterir.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!qr</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Yazdığınız link veya yazı ile bot QR kod oluşturur.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!rastgele sayı1 sayı2</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Belirttiğiniz sayı aralığın'da bot rastgele bir sayı verir.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!tarih</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Sunucu'nun bulunduğu zamanı gösterir.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!sifre</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Belirttiğiniz sayı aralığın'da bot size bir şifre oluşturur.            </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!kripto</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Belirlenen Kripto Para biriminin Dünyada'ki alış ve satışlarını gösterir             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!mcsunucu <ip></code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Yazdığınız ip adresine ait bilgileri gösterir.            </div>
+          </div>
+              </div>
+                <div class="tab-pane " id="eglence">
+                          <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!öv @Kullanıcı</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Belirlenen Kullanıcıyı övgü yağmuruna boğarsın.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!cat</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Bot Rastgele kedi fotoğraflarını mesaj olarak atar.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!dog</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Bot Rastgele köpek fotoğrafları mesaj olarak atar.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!döv @Kullanıcı</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Belirtilen kullanıcıyı dayak manyağı yaparsınız.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!espiri</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Komutun kullanıldığı kanala bot soğuk espiriler atar.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!fucked</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Belirtilen kullanıcıyı fuckedlar.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!hıyar</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Hıyarınızın kaç cm olduğunu gösterir.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!sarıl</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Belirttiğiniz kişiye sarılırsınız.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!say</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Yazdığınız mesaj'ı bota yazdırırsınız.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!sigara-ic</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Belirttiğiniz kullanıcı ile sigara içersiniz.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!tokat</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Belirtilen kullanıcı'ya tokat manyağı yaparsınız.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!çay-dök</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Belirttiğiniz kullanıcının üstüne çay dökersiniz.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!öldür</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Belirtilen kullanıcı rambo kedi tarafın'dan öldürülür.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!öp</code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Belirttiğiniz kullanıcıyı öpersiniz.             </div>
+          </div>
+                  <div class="panel panel-default panel-k">
+            <div class="panel-heading">
+              <code>p!mcbasari <baslik>/<yazi></code>
+              <div class="sag">
+                <!--<span class="label label-default">YAKINDA</span>-->
+              </div>
+            </div>
+            <div class="panel-body">
+              Minecraft başarımı üretme aracı.            </div>
+          </div>
+              </div>
+            </div>
+</div>
+
+<div class="col-md-3">
+  <div class="hidden-sm hidden-md hidden-lg">
+    <img src="../discordapp.com/api/guilds/428913287338655745/widget7c49.png?style=banner2" style="width: 100%;" alt="PirdBot Discord Server" class="img-responsive img-rounded"><br>
+  </div>
+  <div class="hidden-xs">
+    <script type="text/javascript">
+      $(document).ready(() => {
+        var height = $("#commands_category").height()+4;
+        $("#discord_ifream").html(`<iframe src="//discordapp.com/widget?id=428913287338655745&theme=dark" width="100%" height="${height}" allowtransparency="true" frameborder="0"></iframe>`)
+      });
+    </script>
+    <div id="discord_ifream"></div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $("#searchCommands").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $(".tab-pane.active .panel").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+  $("#commands_category").on("click", "li", function() {
+    $("#searchCommands").val("");
+    $(".tab-content .panel").css("display", "")
+  });
+</script>
+    </div>
+
+    <div id="pModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="feedback left hidden-xs" data-toggle="tooltip" data-placement="right" title="Hata Bildirmek İçin Tıklayın" onclick="window.open('https://goo.gl/forms/5size9lXwytNsl383','_blank')">
+      <button type="button" class="btn btn-primary btn-circle btn-lg" >
+        <i class="fa fa-bug fa-2x" title="Report Bug"></i>
+      </button>
+    </div>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89120054-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-89120054-5');
+    </script>
+  </body>
+
+<!-- Mirrored from pird.xyz/commands by zikscopy Website Copier/3.x [XR&CO'2014], Wed, 31 Jul 2019 21:17:56 GMT -->
+</html>
+<script type="text/javascript">
+  var URL         = "index.html";
+  var ADMIN_URL   = "admin.html";
+  var INC_PATH    = "includes/index.html";
+  var THEMES_PATH = "content/index.html";
+  var ANLIK_URL   = "commands.html";
+  var LOGIN_URL   = "https://discordapp.com/oauth2/authorize?response_type=code&amp;client_id=428918041628246017&amp;redirect_uri=http://pird.xyz/?go=login&amp;scope=identify+email+guilds";
+  var DASHBOARD_URL= "index.html";
+  var PANEL_PATH   = "content/panel/index.html";
+
+  var start = new Date();
+  jQuery.ready();
+  var end = new Date();
+  var difference = (end - start) / 1000;
+  console.log("[PIRD] Loading time "+difference+" second.")
+</script>

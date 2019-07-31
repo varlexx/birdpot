@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr" class="dark">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>PirdBot - The Discord Bot</title>
+
+    <meta name="keywords" content="Discord, Discord Bot, Discord App, DiscordApp, DiscordBots, Discord Bots, PirdWeb, PirdBot, PirdBot Support, PirdBot Blocker, Bots"/>
+    <meta name="description" content="PirdBot Discord Bot ile sunucularınızı renk katıp kolayca kontrol sağlayabilirsiniz. Bu site sayesinde sunucunuzdaki PirdBot ayarlarını yapabilirsiniz."/>
+
+    <meta name="robots" content="index, follow"/>
+    <meta name="copyright" content="&copy; Pird System"/>
+    <meta name="author" content="Berk A."/>
+    <meta name="abstract" content="PirdBot Yönetim ve Kontrol Paneli"/>
+
+    <link rel="stylesheet" href="http://pird.xyz/content/assets/css/bootstrap.min.css?v=2.0" rel="stylesheet">
+    <link rel="stylesheet" href="http://pird.xyz/content/assets/css/style.css?v=2.0" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?v=2.0" rel="stylesheet">
+
+    <script src="http://pird.xyz/content/assets/js/jquery-1.8.3.min.js?v=2.0"></script>
+    <script src="http://pird.xyz/content/assets/js/bootstrap.min.js?v=2.0"></script>
+    <script src="http://pird.xyz/content/assets/js/custom.js?v=2.0"></script>
+
+    <link rel="shortcut icon" href="http://pird.xyz/content/assets/img/favicon.png?v=2.0">
+  </head>
+  <body>
+    <div class="header">
+      <div class="header__logo">
+        PirdBot
+      </div>
+      <div class="header__nav">
+        <a href="http://pird.xyz">Anasayfa</a>
+        <a href="http://pird.xyz/commands">Komutlar</a>
+        <a href="http://pird.xyz/modules">Modüller</a>
+        <a href="http://pird.xyz/blog">Blog</a>
+        <a href="http://discord.gg/Xch8yQ9" target="_blank">Destek</a>
+      </div>
+      <div class="header__controle">
+                  <a href="javascript:void(0)" onclick="PirdWindow(LOGIN_URL)" class="btn pird">Giriş Yap</a>
+              </div>
+    </div>
+    <div class="container-fluid">
+          </div>
+
+    <div id="pModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="feedback left hidden-xs" data-toggle="tooltip" data-placement="right" title="Hata Bildirmek İçin Tıklayın" onclick="window.open('https://goo.gl/forms/5size9lXwytNsl383','_blank')">
+      <button type="button" class="btn btn-primary btn-circle btn-lg" >
+        <i class="fa fa-bug fa-2x" title="Report Bug"></i>
+      </button>
+    </div>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89120054-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-89120054-5');
+    </script>
+  </body>
+</html>
+<script type="text/javascript">
+  var URL         = "http://pird.xyz";
+  var ADMIN_URL   = "http://pird.xyz/admin";
+  var INC_PATH    = "http://pird.xyz/includes";
+  var THEMES_PATH = "http://pird.xyz/content";
+  var ANLIK_URL   = "http://pird.xyz/content/assets/fonts/glyphicons-halflings-regular.ttf";
+  var LOGIN_URL   = "https://discordapp.com/oauth2/authorize?response_type=code&client_id=428918041628246017&redirect_uri=http://pird.xyz/?go=login&scope=identify+email+guilds";
+  var DASHBOARD_URL= "http://pird.xyz/dashboard";
+  var PANEL_PATH   = "http://pird.xyz/content/panel";
+
+  var start = new Date();
+  jQuery.ready();
+  var end = new Date();
+  var difference = (end - start) / 1000;
+  console.log("[PIRD] Loading time "+difference+" second.")
+</script>
